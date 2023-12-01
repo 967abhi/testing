@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steady-steps Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 200px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 100%;
+            height: 38px;
+            border: none;
+            background-color: #F5FBFB;
+            font-family: Inter;
+            font-size: 18px;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+
+        .searchIcon {
+            margin-left: 0px;
+            margin-right: 50px;
+            position: relative;
+            right: 60px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            margin-left: 10px;
+        }
+
+        .emailicon,
+        .Line1,
+        .bellicon,
+        .Line2,
+        .manicon,
+        .Ellipse {
+            margin: 0px 5px;
+            /* margin-top: -10px; */
+        }
+
+        .exampleicon {
+            margin-right: -15px; /* Adjust the margin to overlap with the manicon */
+        }
+
+        .manicon {
+            position: absolute;
+            left: 1424px;
+            top:25px;
+            /* right: 1000px; Adjust the left position to overlap with the Ellipse */
+        }
+        
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-bar {
+                margin-top: 10px;
+            }
+
+            .icons {
+                margin-top: 10px;
+            }
+
+            .icon {
+                margin-left: 0;
+            }
+            .manicon{
+              display: none;
+            }
+          
+        }
+        /* ================================================ */
+        .sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color: #fff;
+            color: #737373;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Updated to align items at the top */
+            padding-top: 20px;
+        }
+
+        .menu-item {
+            display: flex; /* Updated to display items in a row */
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-item:hover {
+            background-color: #E1F0F2;
+            
+        }
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 30px; /* Added margin to create space between icon and text */
+        }
+        .menu-icon2{
+            width: 24px;
+            height: 24px;
+            margin-right: 65px;
+        }
+       
+        .menu-item2{
+            position: relative;
+            top: 350px;
+        }
+@media screen and (max-width: 768px) {
+          .sidebar {
+        width: 100%; /* Make the sidebar take full width */
+        justify-content: center; /* Center items vertically */
+        padding-top: 0;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .menu-item {
+        padding: 15px;
+        margin: 10px 0; /* Add margin between menu items */
+    }
+
+    .menu-item2 {
+        position: relative; /* Adjust top position for the second menu item */
+        top: 450px;
+    }
+
+    .menu-icon {
+        margin-right: 10px;
+    }
+
+    .menu-icon2 {
+        margin-right: 10px;
+    }
+}
+/* ========================================= */
+.fetchthedata{
+    position: absolute;
+    left: 250px;
+    bottom: 450px;
+    top: 150px;
+    background-color: #F5FBFB;
+    height: 750px;
+    width: 1250px;
+}
+.h1{
+    color: #098590;
+    margin-left: 20px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 1200px;
+  /* display: flex; */
+  position: relative;
+  left: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./public/Img/RippleHealthcare_Logo_Final 2.png" alt="">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <img class="searchIcon" src="./public/Img/search 1.png" alt="">
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <img class="emailicon" src="./public/Img/email (1) 1.png" alt="">
+                <img class="Line1" src="./public/Img/Line 3.png" alt="">
+            </div>
+            <div class="icon">
+                <img class="bellicon" src="./public/Img/bell 1.png" alt="">
+                <img class="Line2" src="./public/Img/Line 3.png" alt="">
+            </div>
+            <div class="icon">
+                <img class="exampleicon" src="./public/Img/Example User.png" alt="">
+            </div>
+            <div class="icon">
+                <img class="manicon" src="./public/Img/man 1.png" alt="">
+            </div>
+            <div class="icon">
+                <img class="Ellipse" src="./public/Img/Ellipse 1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- ===============sidebar=================== -->
+    <div class="sidebar">
+        <div class="menu-item">
+            <img src="./public/Img/dashboard (1).png" alt="Dashboard" class="menu-icon">
+            <div>Dashboard</div>
+        </div>
+        <div class="menu-item">
+          <img src="./public/Img/user (1).png" class="menu-icon2" alt="">
+            <div class="Profile">Profile</div>
+        </div>
+        <div class="menu-item">
+            <img src="./public/Img/cloud-computing (2).png" alt="Cloud Drive" class="menu-icon">
+            <div>Cloud Drive</div>
+        </div>
+        <div class="menu-item">
+            <img src="./public/Img/folder.png" alt="Shared Drive" class="menu-icon">
+            <div>Shared Drive</div>
+        </div>
+        <div class="menu-item2">
+        <div class="menu-item">
+            <img src="./public/Img/setting (1).png" alt="Settings" class="menu-icon">
+            <div>Settings</div>
+        </div>
+        <div class="menu-item">
+            <img src="./public/Img/customer-service (1) (1).png" alt="Support" class="menu-icon">
+            <div>Support</div>
+        </div>
+        <div class="menu-item">
+            <img src="./public/Img/logout (1).png" alt="Logout" class="menu-icon">
+            <div>Logout</div>
+        </div>
+        <div class="menu-item">
+            <img src="./public/Img/logout (1).png" alt="Logout" class="menu-icon">
+            <div> <a href="./Hiprodetails.html" style="text-decoration: none; color: #737373;">Hiprodetails</a> </div>
+        </div>
+
+    </div>
+    </div>
+    <!-- ===============sidebar end ================================= -->
+    <div class="fetchthedata">
+        
+  <h2 class="h1">Steady-steps</h2>
+
+  <table id="profileTable">
+    <thead class="thead">
+      <tr class="tablerow">
+        <th>ID</th>
+     
+
+        <th>Location</th>
+        
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Risk Of Fall </th>
+        <th>Leaderboard</th>
+        <th>Profile</th>
+        <!-- Add more columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table body will be populated dynamically with JavaScript -->
+    </tbody>
+  </table>
+
+    </div>
+    <script>
+          document.addEventListener('DOMContentLoaded', fetchAndDisplayProfiles);
+
+async function fetchAndDisplayProfiles() {
+  const apiUrl = 'http://3.7.133.44/dashboard/Steady-steps/get_profiles';
+
+  try {
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    displayProfiles(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    // Handle error, e.g., display an error message on the page
+  }
+}
+
+function displayProfiles(profiles) {
+  const tableBody = document.querySelector('#profileTable tbody');
+
+  // Clear existing table rows
+  tableBody.innerHTML = '';
+
+  // Populate the table with fetched data
+  profiles.forEach(profile => {
+    const row = tableBody.insertRow();
+
+    // Adjust the following lines based on your API response structure
+    const idCell = row.insertCell(0);
+    
+    const locationCell = row.insertCell(1);
+    const genderCell = row.insertCell(2);
+    const ageCell = row.insertCell(3);
+    const riskCell = row.insertCell(4);
+    const leadeCell = row.insertCell(5);
+    const profileCell = row.insertCell(6);
+
+
+    // Assign values to the cells
+    idCell.textContent = profile.user_id;
+    locationCell.textContent = profile.Location;
+    genderCell.textContent = profile.Gender;
+    ageCell.textContent = profile.Age;
+    riskCell.textContent = profile.Risk_of_Fall;
+    leadeCell.textContent = profile.Leader_board;
+    profileCell.textContent = profile.Profile_url;
+    // Add more cells as needed
+  });
+}
+// document.addEventListener('DOMContentLoaded', fetchAndDisplayProfiles);
+
+// async function fetchAndDisplayProfiles() {
+//   const apiUrl = 'http://3.7.133.44/dashboard/Steady-steps/get_profiles';
+
+//   try {
+//     const response = await fetch(apiUrl);
+
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+
+//     const data = await response.json();
+//     displayProfiles(data);
+//   } catch (error) {
+//     console.error('Error fetching data:', error);
+//     // Handle error, e.g., display an error message on the page
+//   }
+// }
+
+// function displayProfiles(profiles) {
+//   const tableBody = document.querySelector('#profileTable tbody');
+
+//   // Clear existing table rows
+//   tableBody.innerHTML = '';
+
+//   // Populate the table with fetched data
+//   profiles.forEach((profile, index) => {
+//     const row = tableBody.insertRow();
+
+//     // Adjust the following lines based on your API response structure
+//     const idCell = row.insertCell(0);
+//     const locationCell = row.insertCell(1);
+//     const genderCell = row.insertCell(2);
+//     const ageCell = row.insertCell(3);
+//     const riskCell = row.insertCell(4);
+//     const leadeCell = row.insertCell(5);
+//     const profileCell = row.insertCell(6);
+
+//     // Assign values to the cells
+//     idCell.textContent = profile.user_id;
+//     locationCell.textContent = profile.Location;
+//     genderCell.textContent = profile.Gender;
+//     ageCell.textContent = profile.Age;
+//     riskCell.textContent = profile.Risk_of_Fall;
+//     leadeCell.textContent = profile.Leader_board;
+//     profileCell.textContent = profile.Profile_url;
+//     // Add more cells as needed
+
+//     // Add a horizontal line after each row except the last one
+//     if (index < profiles.length - 1) {
+//       const hr = document.createElement('hr');
+//       hr.style.width='100px'
+//       tableBody.appendChild(hr);
+//     }
+//   });
+// }
+
+    </script>
+</body>
+</html>
